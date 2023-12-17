@@ -1,0 +1,86 @@
+.header {
+	padding-top: 40px;
+	position: absolute;
+	inset: 0 0 auto;
+	color: var(--textColor-2);
+	z-index: 100;
+
+	a {
+		color: var(--textColor-2);
+	}
+}
+
+.nav {
+	display: grid;
+	grid-template-columns: 2fr 8fr 2fr;
+	gap: 20px;
+	align-items: center;
+}
+
+.nav-list {
+	justify-self: center;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 65px;
+
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.nav-list__item {
+	position: relative;
+}
+
+.nav-list__link {
+	transition: opacity 0.2s ease-in;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+
+	&--dropdown {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		&::after {
+			content: url(./../../img/icons/arrow.svg);
+			height: 18px;
+		}
+	}
+}
+
+.nav__cart {
+	justify-self: end;
+}
+
+.nav-list__sub-nav {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	transform: translateY(10%);
+	transition: transform 0.2s ease-in,
+		opacity 0.2s ease-in;
+	padding-top: 10px;
+}
+
+.nav-list__item:hover .nav-list__sub-nav {
+	opacity: 1;
+	transform: translateY(0%);
+	pointer-events: all;
+}
+
+@include mediaTablet {
+	.nav-list {
+		display: none;
+	}
+
+	.nav {
+		grid-template-columns: 10fr 40px 40px;
+	}
+}

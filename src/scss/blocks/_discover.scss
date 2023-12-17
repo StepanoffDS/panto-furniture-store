@@ -1,0 +1,106 @@
+.discover {
+	position: relative;
+
+	background-image: url(./../img/discover/header-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	aspect-ratio: 1440/1084;
+
+	color: var(--textColor-2);
+	@include retina-bg (url(./../img/discover/header-bg@2x.jpg));
+}
+
+.discover__inner {
+	margin-top: clamp(100px, 5.179rem + 5.36vw, 160px);
+}
+
+.discover__title {
+	max-width: 860px;
+	margin: 0 auto;
+
+	text-align: center;
+	// font-size: 80px;
+	font-size: clamp(28px, 0.821rem + 4.64vw, 80px);
+	text-wrap: balance;
+	font-weight: 700;
+	line-height: 130%;
+	/* 104px */
+	letter-spacing: -0.8px;
+	text-transform: capitalize;
+}
+
+.discover__subtitle {
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 14px;
+	margin-bottom: clamp(15px, 0.402rem + 2.68vw, 45px);
+
+	text-align: center;
+	// font-size: 24px;
+	font-size: clamp(16px, 0.857rem + 0.71vw, 24px);
+	text-wrap: balance;
+	font-weight: 400;
+	line-height: 160%;
+	/* 38.4px */
+
+	opacity: 0.8;
+}
+
+.discover__form {
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+/* Dots */
+
+.discover__dot {
+	@media (max-width: 819px) {
+		display: none;
+	}
+}
+
+.discover__dot-sofa {
+	position: absolute;
+	left: 20.9%;
+	top: 63%;
+}
+
+.discover__dot-vasa-sm {
+	position: absolute;
+	left: 8%;
+	top: 67%;
+
+}
+
+.discover__dot-statue {
+	position: absolute;
+	left: 55%;
+	top: 72%;
+
+}
+
+.discover__dot-vasa-lg {
+	position: absolute;
+	left: 94%;
+	top: 75%;
+}
+
+@include mediaTablet {
+	.discover {
+		height: 85vh;
+		background-position: center;
+
+		.container {
+			height: 100%;
+		}
+	}
+
+	.discover__subtitle {
+		margin-bottom: 40px;
+	}
+
+	.discover__inner {
+		height: 100%;
+	}
+}

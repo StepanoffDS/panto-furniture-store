@@ -1,0 +1,32 @@
+:root {
+	// PAGE SIZES
+	--container-width: 1310px;
+	--container-padding: 15px;
+
+	//FONT
+	--font-main: 'Gilroy', sans-serif;
+	--font-card: 'Inter', sans-serif;
+
+	//FONT COLOR
+	--textColor-1: #1e1e1e;
+	--textColor-2: #fff;
+	--textColor-muted: #8D8D8D;
+	--textColor-card: #0D1B39;
+	--accentColor: #E58411;
+
+	// BG COLOR
+	--page-bg-1: #fff;
+	--page-bg-2: #f7f7f7;
+	--footer-bg: #2D2F33;
+
+	// UI COLOR
+	--ui-orangeColor: #E58411;
+	--ui-grayColor: #7C7C7C;
+	--ui-turquoiseColor: #00D6C9;
+	--ui-darkBlueColor: #0D1B39;
+}
+
+// .dark {
+// 	--page-bg: #252526;
+// 	--text-color: #fff;
+// }

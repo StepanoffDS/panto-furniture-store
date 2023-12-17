@@ -1,0 +1,13 @@
+.read-more {
+	display: inline-flex;
+	gap: 13px;
+	align-items: center;
+	color: var(--accentColor);
+	font-weight: 500;
+	line-height: 185%;
+
+	&::after {
+		content: url('./../img/icons/arrow-long.svg');
+		height: 24px;
+	}
+}

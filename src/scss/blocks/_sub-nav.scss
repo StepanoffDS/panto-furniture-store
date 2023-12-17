@@ -1,0 +1,24 @@
+.sub-nav {
+	display: grid;
+	gap: 12px;
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: var(--page-bg-2);
+	min-width: 140px;
+	box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 20px 1px;
+
+	a {
+		color: var(--textColor-1);
+		font-size: 16px;
+	}
+}
+
+.sub-nav__item {}
+
+.sub-nav__link {
+	transition: opacity 0.2s ease-in;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

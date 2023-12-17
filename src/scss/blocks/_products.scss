@@ -1,0 +1,33 @@
+.products {
+	padding: 50px 0;
+	background-color: var(--page-bg-2);
+}
+
+.products__title {
+	margin-bottom: 32px;
+	text-align: center;
+
+	font-size: 42px;
+	font-weight: 700;
+}
+
+.products__tabs {
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.products__slider {
+	margin-bottom: 60px;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.products__link {
+	text-align: center;
+	font-size: 18px;
+	justify-content: center;
+	margin: 0 auto;
+}
