@@ -13,3 +13,12 @@ swiper
 // Tabs
 import tabsSwiper from './modules/tabs.js'
 tabsSwiper()
+
+// Animations
+import animations from './modules/anim.js'
+animations()
+
+// Header
+import header from './modules/header.js';
+header()
+

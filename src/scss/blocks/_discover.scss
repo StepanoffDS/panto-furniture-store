@@ -104,3 +104,9 @@
 		height: 100%;
 	}
 }
+
+@include mediaTabletEx {
+	.discover {
+		height: 95vh;
+	}
+}

@@ -1,12 +1,35 @@
 .header {
 	padding-top: 40px;
-	position: absolute;
+	position: fixed;
 	inset: 0 0 auto;
 	color: var(--textColor-2);
 	z-index: 100;
+	transition: transform 0.1s linear;
+	animation: headerShow 1s ease-out;
+
 
 	a {
 		color: var(--textColor-2);
+	}
+
+	&.hide {
+		transform: translateY(-74px)
+	}
+
+	&--scrolled {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: var(--textColor-1);
+	}
+}
+
+@keyframes headerShow {
+	from {
+		transform: translateY(-800px);
+	}
+
+	to {
+		transform: translateY(0px);
 	}
 }
 
@@ -82,5 +105,17 @@
 
 	.nav {
 		grid-template-columns: 10fr 40px 40px;
+	}
+}
+
+@include mediaMobile {
+	.header {
+		padding-top: 30px;
+
+		&--scrolled {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			background-color: var(--textColor-1);
+		}
 	}
 }
