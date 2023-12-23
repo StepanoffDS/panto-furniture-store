@@ -3,7 +3,6 @@ function mobileNav() {
 	const navBtn = document.querySelector('.mobile-nav-btn');
 	const nav = document.querySelector('.mobile-nav');
 	const menuIcon = document.querySelector('.nav-icon');
-	const subNav = document.querySelectorAll('.mobile-sub-nav')
 	const mobNavItem = document.querySelectorAll('.mobile-nav__item')
 
 	navBtn.onclick = function (e) {
@@ -14,21 +13,28 @@ function mobileNav() {
 		document.body.classList.toggle('bg');
 	};
 
+	nav.onclick = (e) => {
+		e.stopPropagation()
+	}
+
 	mobNavItem.forEach(element => {
-		element.addEventListener('click', () => {
-			if (element.querySelector('.mobile-sub-nav') !== null) {
+		if (element.querySelector('.mobile-sub-nav')) {
+			element.addEventListener('click', function () {
 				element.querySelector('.mobile-sub-nav').classList.toggle('none')
-			}
-			return
-		})
+			})
+		} else {
+			element.addEventListener('click', closeMobMenu)
+		}
 	})
 
-	document.addEventListener('click', () => {
+	document.addEventListener('click', closeMobMenu)
+
+	function closeMobMenu() {
 		nav.classList.remove('mobile-nav--open');
 		menuIcon.classList.remove('nav-icon--active');
 		document.body.classList.remove('no-scroll');
 		document.body.classList.remove('bg');
-	})
+	}
 }
 
 export default mobileNav;
